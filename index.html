@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPMJ - Neon Menu</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #050508;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .neon-card {
+            width: 100%;
+            max-width: 500px;
+            background: #0f0f15;
+            border: 3px solid #ff0055;
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 1px solid #ff0055;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(34px, 9vw, 46px);
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 0 0 10px #ff0055,
+                         0 0 20px #ff0055;
+        }
+
+        .sub-title {
+            font-size: 13px;
+            color: #00ff66;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        .byob-tag {
+            display: inline-block;
+            background: #00ff66;
+            color: #000000;
+            font-family: 'Oswald', sans-serif;
+            font-size: 14px;
+            padding: 3px 14px;
+            border-radius: 20px;
+            margin-top: 10px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .category-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            color: #00ff66;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 22px 0 10px;
+            text-shadow: 0 0 8px rgba(0, 255, 102, 0.4);
+        }
+
+        .menu-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .item-box {
+            background: #181822;
+            border-left: 4px solid #ff0055;
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .item-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .item-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: #ffffff;
+        }
+
+        .item-price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            color: #ff0055;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .item-desc {
+            font-size: 11px;
+            color: #9999aa;
+            margin-top: 4px;
+        }
+
+        /* BYOB and Juices */
+        .byob-section .item-box,
+        .juices-section .item-box {
+            border-left-color: #00ff66;
+        }
+
+        /* Cake section */
+        .cake-section .category-title {
+            color: #ffb000;
+            text-shadow: 0 0 8px rgba(255, 176, 0, 0.4);
+        }
+
+        .cake-section .item-box {
+            border-left-color: #ffb000;
+        }
+
+        /* Games section */
+        .games-section .category-title {
+            color: #00d9ff;
+            text-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+        }
+
+        .games-section .item-box {
+            border-left-color: #00d9ff;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #666677;
+            margin-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 400px) {
+            body {
+                padding: 10px;
+            }
+
+            .neon-card {
+                padding: 16px;
+            }
+
+            .category-title {
+                font-size: 21px;
+            }
+
+            .item-name {
+                font-size: 13px;
+            }
+
+            .item-price {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="neon-card">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="title">AAPMJ</h1>
+        <div class="sub-title">Good Food • Good Vibes</div>
+        <div class="byob-tag">BYOB FRIENDLY STALL</div>
+    </div>
+
+    <!-- SANDWICH MENU -->
+    <section class="sandwich-section">
+        <h2 class="category-title">🥪 SANDWICH</h2>
+
+        <div class="menu-grid">
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Grill Paneer Sandwich</span>
+                    <span class="item-price">₹125</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Grill Cheese Sandwich</span>
+                    <span class="item-price">₹90</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BYOB MENU -->
+    <section class="byob-section">
+        <h2 class="category-title">🧊 BYOB</h2>
+
+        <div class="menu-grid">
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Paneer</span>
+                    <span class="item-price">₹70</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JUICES MENU -->
+    <section class="juices-section">
+        <h2 class="category-title">🥤 JUICES</h2>
+
+        <div class="menu-grid">
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Lemonade</span>
+                    <span class="item-price">₹20</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Lemon Soda</span>
+                    <span class="item-price">₹25</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Orange Juice</span>
+                    <span class="item-price">₹15</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CAKE MENU -->
+    <section class="cake-section">
+        <h2 class="category-title">🍰 CAKE</h2>
+
+        <div class="menu-grid">
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Dates Cake</span>
+                    <span class="item-price">₹20</span>
+                </div>
+                <div class="item-desc">One Slice</div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Banana Cake</span>
+                    <span class="item-price">₹20</span>
+                </div>
+                <div class="item-desc">One Slice</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GAMES MENU -->
+    <section class="games-section">
+        <h2 class="category-title">🎯 GAMES</h2>
+
+        <div class="menu-grid">
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Find Identical Card</span>
+                    <span class="item-price">₹30</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Puzzle</span>
+                    <span class="item-price">₹20</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Pick and Speak</span>
+                    <span class="item-price">₹15</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Hit the Target</span>
+                    <span class="item-price">₹25</span>
+                </div>
+            </div>
+
+            <div class="item-box">
+                <div class="item-top">
+                    <span class="item-name">Shoot at the Bottle</span>
+                    <span class="item-price">₹15</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        ✦ Freshly Made • Fun for Everyone ✦
+        <br>
+        EAT • PLAY • REPEAT
+    </div>
+
+</div>
+
+</body>
+</html>
